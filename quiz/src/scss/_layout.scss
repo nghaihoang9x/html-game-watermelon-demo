@@ -1,0 +1,79 @@
+// Typography
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $color-heading;
+  font-weight: 400;
+  padding: 0;
+  font-family: $heading-font;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  line-height: 1.3em;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  line-height: 1.3em;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  line-height: 1.3em;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+  line-height: 1.3em;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+  line-height: 1.3em;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+  line-height: 1.3em;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  font-weight: normal;
+  line-height: 24px;
+  color: $color-text;
+}
+
+a {
+  transition: .3s all;
+  &:hover {
+    color: inherit;
+  }
+}
+
+a{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Game</title>
+    <link rel="stylesheet" href="./assets/main.css?v=0.3">
+</head>
+<body ontouchstart="">
+<div class="site-header">
+    <a href="#" class="btn--home">
+        <svg id="Layer_1" enable-background="new 0 0 512.016 512.016" height="512" viewBox="0 0 512.016 512.016" width="512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m506.104 254.205c-3.901 3.875-8.999 5.812-14.096 5.812-5.141 0-10.279-1.969-14.188-5.904l-5.812-5.85v83.754c0 11.046-8.954 20-20 20s-20-8.954-20-20c0 0 .037-123.288.097-123.92l-162.204-163.274c-7.464-6.395-18.454-6.418-25.947-.055l-163.946 163.623v223.626c0 22.056 17.944 40 40 40h62v-114c0-41.355 33.645-75 75-75s75 33.645 75 75v114h60c22.056 0 40-17.944 40-40 0-11.046 8.954-20 20-20s20 8.954 20 20c0 44.112-35.888 80-80 80h-80c-11.046 0-20-8.954-20-20v-134c0-19.299-15.701-35-35-35s-35 15.701-35 35v134c0 11.046-8.954 20-20 20h-82c-44.112 0-80-35.888-80-80v-183.705l-5.872 5.861c-7.817 7.802-20.48 7.79-28.284-.028-7.803-7.818-7.79-20.481.028-28.285 0 0 210.834-210.404 211.118-210.657 22.842-20.335 57.227-20.262 79.982.169.282.254 209.216 210.549 209.216 210.549 7.786 7.836 7.744 20.499-.092 28.284zm-298.096-60.189c-11.046 0-20 8.954-20 20s8.954 20 20 20h99c11.046 0 20-8.954 20-20s-8.954-20-20-20z"/></svg>
+    </a>
+    <div class="site-point">
+        <div id="round" class="h5 point__number point__water-melon">30</div>
+        <div id="coin" class="h5 point__number point__coin">0.00</div>
+    </div>
+</div>
+<div id="main" class="site-main">
+    <div class="site-layout">
+        <div class="water-melon">
+            <div id="round-title" class="h2 water-melon__title">Round <span>01</span></div>
+            <div class="water-melon__wrapper">
+                <div class="bonus-countdown is-hidden">
+                    <span class="minute">00</span>
+                    <span>:</span>
+                    <span class="seconds">09.57</span>
+                </div>
+                <div class="bonus-multiplayer is-hidden">
+                    <div class="play play--one is-active">
+                        <img src="./assets/images/play1.png">
+                    </div>
+                    <div class="bonus-multiplayer__title">
+                        It's <span>Your</span> turn
+                    </div>
+                    <div class="play play--two">
+                        <img src="./assets/images/play2.png">
+                    </div>
+                </div>
+                <div class="water-melon__thumbnail">
+                    <div class="water-melon__image">
+                        <img src="./assets/images/watermelon-0.png" alt="Water Melon" class="step step-0 active">
+                        <img src="./assets/images/watermelon-1.png" alt="Water Melon" class="step step-1">
+                        <img src="./assets/images/watermelon-2.png" alt="Water Melon" class="step step-2">
+                        <img src="./assets/images/watermelon-3.png" alt="Water Melon" class="step step-3">
+                        <img src="./assets/images/watermelon-4.png" alt="Water Melon" class="step step-4">
+                        <img src="./assets/images/watermelon-5.png" alt="Water Melon" class="step step-5">
+                        <img src="./assets/images/watermelon-10.png" alt="Water Melon" class="step step-10">
+                        <img src="./assets/images/watermelon-11.png" alt="Water Melon" class="step step-11">
+                        <img src="./assets/images/watermelon-12.png" alt="Water Melon" class="step step-12">
+                        <img src="./assets/images/watermelon-13.png" alt="Water Melon" class="step step-13">
+                        <img src="./assets/images/watermelon-14.png" alt="Water Melon" class="step step-14">
+                        <img src="./assets/images/watermelon-15.png" alt="Water Melon" class="step step-15">
+                        <div class="step step--group step-16">
+                            <img src="./assets/images/watermelon-16.png" alt="Water Melon" class="main">
+                            <img src="./assets/images/watermelon-16-animate1.png" alt="Water Melon" class="animate">
+                            <img src="./assets/images/watermelon-16-animate2.png" alt="Water Melon" class="animate-2">
+                        </div>
+                        <div class="step step--group step-17">
+                            <img src="./assets/images/watermelon-17.png" alt="Water Melon" class="main">
+                            <img src="./assets/images/watermelon-17-animate1.png" alt="Water Melon" class="animates">
+                            <img src="./assets/images/watermelon-17-animate2.png" alt="Water Melon" class="animates-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-warning is-hidden">
+                    <img src="./assets/images/Warning.png">
+                </div>
+            </div>
+        </div>
+        <div class="round-reward">
+            <div class="h5 site-title">Round Reward</div>
+            <div class="round-reward__money">
+                <div class="h1 site-heading">
+                    <span class="currency">$</span>
+                    <div class="total-money">
+                        <span class="price">00</span>
+                        <span>.</span>
+                        <span class="unit">00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bands">
+            <a href="javascript:void(0)" class="bands__button btn--bands" data-value="5" data-price="5">
+                <div class="bands__content">
+                    <div class="bands__inner">
+                        <div class="h3 bands__number">5</div>
+                        <div class="h6 bands__title">Band</div>
+                    </div>
+                    <div class="h4 bands__money">
+                        <span class="currency">$</span>
+                        <span>0.05</span>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="bands__button btn--bands" data-value="25" data-price="50">
+                <div class="bands__content">
+                    <div class="bands__inner">
+                        <div class="h3 bands__number">25</div>
+                        <div class="h6 bands__title">Bands</div>
+                    </div>
+                    <div class="h4 bands__money">
+                        <span class="currency">$</span>
+                        <span>0.50</span>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="bands__button btn--bands" data-value="50" data-price="200">
+                <div class="bands__content">
+                    <div class="bands__inner">
+                        <div class="h3 bands__number">50</div>
+                        <div class="h6 bands__title">Bands</div>
+                    </div>
+                    <div class="h4 bands__money">
+                        <span class="currency">$</span>
+                        <span>2.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="bands__button btn--bands" data-value="100" data-price="800">
+                <div class="bands__content">
+                    <div class="bands__inner">
+                        <div class="h3 bands__number">100</div>
+                        <div class="h6 bands__title">Bands</div>
+                    </div>
+                    <div class="h4 bands__money">
+                        <span class="currency">$</span>
+                        <span>8.00</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="javascript:void(0)" class="h4 btn btn--primary btn--collect btn--disable">
+            Collect Reward
+        </a>
+    </div>
+</div>
+<div id="gameover" class="site-popup game-over">
+    <div class="site-popup__wrapper">
+        <div class="game-over__thumbnail">
+            <div class="game-over__images">
+                <div class="image image--main">
+                    <img src="./assets/images/gameover.png" alt="Game over">
+                </div>
+                <div class="image image--ele1">
+                    <img src="./assets/images/ele1.png" alt="Game over">
+                </div>
+                <div class="image image--ele2">
+                    <img src="./assets/images/ele2.png" alt="Game over">
+                </div>
+                <div class="image image--ele3">
+                    <img src="./assets/images/ele3.png" alt="Game over">
+                </div>
+                <div class="image image--ele4">
+                    <img src="./assets/images/ele4.png" alt="Game over">
+                </div>
+            </div>
+            <div class="game-over__header">
+                <div class="game-over__heading">
+                    Oops!
+                </div>
+                <div class="game-over__subheading">
+                    Too many bands!
+                </div>
+            </div>
+        </div>
+        <div class="bonus-insurance" style="display: none;">
+            <div class="bonus-insurance__icon">
+                <img src="./assets/images/bonus/insurance.png">
+            </div>
+            <div class="bonus-insurance__title">
+                Reward Recovered
+            </div>
+            <div class="bonus-insurance__price">
+                <sup>$</sup><span>01.05</span>
+            </div>
+        </div>
+        <div class="flex justify--center">
+            <a href="javascript:void(0)" id="btn-game-over" class="btn btn--primary btn--game-over">
+                Next Round
+            </a>
+        </div>
+    </div>
+</div>
+<div id="gameovertime" class="site-popup game-over">
+    <div class="popup-collect__wrapper">
+        <div class="hammer-popup">
+            <div class="hammer-popup__title hammer-popup__title--round">
+                Round <span>01</span>
+            </div>
+            <div class="hammer-popup__heading">
+                Oops!
+            </div>
+            <div class="hammer-popup__title">
+                You're out of time
+            </div>
+            <div class="hammer-popup__image">
+                <img src="assets/images/lost.png" alt="">
+            </div>
+            <div class="hammer-popup__heading mgb--20">
+                You didn’t collect in time
+            </div>
+        </div>
+        <div class="flex justify--center">
+            <a href="javascript:void(0)" id="btn-game-over" class="btn btn--primary btn--game-over">
+                Next Round
+            </a>
+        </div>
+    </div>
+</div>
+<div id="bonus-20" class="site-popup bonus">
+    <div class="site-popup__wrapper">
+        <h2 class="h2 popup-title">
+            Bonus <span>Round</span>
+        </h2>
+        <div class="bonus-wrapper">
+            <div class="bonus-item bonus-item--blue" data-bonus="sprint">
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/sprint.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text">
+                                    Double
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    - $50
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title">
+                            Sprint
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Double the reward for the next 10 rounds but you'll be under time pressure to act fast!
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+            <div class="bonus-item bonus-item--red" data-bonus="replay">
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/replay.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/watermelon-point.svg">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text">
+                                    + 5 Rounds
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    - $15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title bonus-item__title--red">
+                            Replay
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Wish you played those rounds differently? Buy an extra 5 rounds
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+            <div class="bonus-item bonus-item--green" data-bonus="multiplayer">
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/multiplayer.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text">
+                                    Triple
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/bonus/uncertainty.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    Uncertainty
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title bonus-item__title--green">
+                            Multiplayer
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Triple the reward for the next 5 rounds by playing click-for-click with another player.
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+        </div>
+        <div class="bonus-button">
+            <a href="javascript:void(0)" class="btn btn--primary btn--small btn--icon btn--bonus" style="margin-right: 10px;display: none;">
+                Let's Go
+                <span class="site-icon">
+                        <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><switch><foreignObject height="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1"/><g><g id="_x30_1_Logout"/><g id="_x30_2_User"/><g id="_x30_3_Login"><g><path fill="currentColor" d="m437 75c-48.3-48.4-112.6-75-181-75-49.2 0-97 14-138.2 40.5-40.1 25.8-72.2 62-92.8 104.9-6 12.4-.7 27.4 11.7 33.4s27.4.7 33.4-11.7c16.6-34.5 42.4-63.7 74.7-84.5 33.2-21.3 71.6-32.6 111.2-32.6 113.6 0 206 92.4 206 206s-92.4 206-206 206c-39.6 0-78-11.3-111.2-32.5-32.3-20.7-58.1-50-74.7-84.5-6-12.4-20.9-17.7-33.4-11.7-12.4 6-17.7 20.9-11.7 33.4 20.6 42.9 52.6 79.2 92.8 104.9 41.2 26.4 89 40.4 138.2 40.4 68.4 0 132.7-26.6 181-75 48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181z"/><path fill="currentColor" d="m139.4 256c0 13.8 11.2 25 25 25h142.2l-36.9 36.9c-9.8 9.8-9.8 25.6 0 35.4 4.9 4.9 11.3 7.3 17.7 7.3s12.8-2.4 17.7-7.3l62.9-62.9c9.2-9.2 14.2-21.4 14.2-34.3s-5.1-25.2-14.2-34.3l-62.9-62.9c-9.8-9.8-25.6-9.8-35.4 0s-9.8 25.6 0 35.4l36.9 36.9h-142.2c-13.8-.2-25 11-25 24.8z"/></g></g><g id="_x30_4_Close"/><g id="_x30_5_Accept"/><g id="_x30_6_Heart"/><g id="_x30_7_Shopping_Bag"/><g id="_x30_8_Cursor"/><g id="_x30_9_Settings"/><g id="_x31_0_Location"/><g id="_x31_1_Star"/><g id="_x31_2_Cloud"/><g id="_x31_3_Plus"/><g id="_x31_4_Search"/><g id="_x31_5_Chat"/><g id="_x31_6_Success"/><g id="_x31_7_Download"/><g id="_x31_8_Pencil"/><g id="_x31_9_Chevron"/><g id="_x32_0_User"/><g id="_x32_1_Minus"/><g id="_x32_2_Loading"/><g id="_x32_3_Upload"/><g id="_x32_4_Password"/><g id="_x32_5_Info"/><g id="_x32_6_Settings"/><g id="_x32_7_Chevron"/><g id="_x32_8_Menu"/><g id="_x32_9_Share"/><g id="_x33_0_Chevron"/><g id="_x33_1_Smartphone"/><g id="_x33_2_Link"/><g id="_x33_3_Folder"/><g id="_x33_4_Checked"/><g id="_x33_5_Bookmark"/><g id="_x33_6_Filter"/><g id="_x33_7_Cloud_Computing"/><g id="_x33_8_Question"/><g id="_x33_9_Eye"/><g id="_x34_0_Zoom_In"/><g id="_x34_1_Zoom_Out"/><g id="_x34_2_Trash"/><g id="_x34_3_Trash_Bin"/><g id="_x34_4_Send"/><g id="_x34_5_Notification"/><g id="_x34_6_Phone_Call"/><g id="_x34_7_Email"/><g id="_x34_8_Shopping_Cart"/><g id="_x34_9_Camera"/><g id="_x35_0_Menu"/></g></switch></svg>
+                    </span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn--outline site-popup--close">
+                Skip
+            </a>
+        </div>
+    </div>
+</div>
+<div id="bonus-10" class="site-popup bonus">
+    <div class="site-popup__wrapper">
+        <h2 class="h2 popup-title">
+            Bonus <span>Round</span>
+        </h2>
+        <div class="bonus-wrapper">
+            <div class="bonus-item bonus-item--yellow" data-bonus='delegate'>
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/delegate.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text delegate--price">
+                                    + $13.34
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/watermelon-point.svg">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    - 5 Rounds
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title">
+                            Delegate
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Someone will complete the next 5 rounds for the same reward as your last 5 rounds.
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+            <div class="bonus-item bonus-item--purple" data-bonus='visibility'>
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/visibility.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/bonus/boomm.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text">
+                                    < 50 Bands
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    - 30%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title">
+                            Visibility
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Be warned when there are less than 50 bands remaining for the next 5 rounds.
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+            <div class="bonus-item bonus-item--red" data-bonus='insurance'>
+                <div class="bonus-item__wrapper">
+                    <div class="bonus-item__head">
+                        <div class="bonus-item__icon">
+                            <div class="bonus-item__icon-image">
+                                <img src="./assets/images/bonus/insurance.png">
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Benefit
+                                </div>
+                                <div class="bonus-item__meta-text">
+                                    20%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bonus-item__meta">
+                            <div class="bonus-item__meta-icon">
+                                <img src="./assets/images/coin.png">
+                            </div>
+                            <div class="bonus-item__meta-wrap">
+                                <div class="bonus-item__meta-label">
+                                    Cost
+                                </div>
+                                <div class="bonus-item__meta-text bonus-item__meta-text--red">
+                                    - $20
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item__content">
+                        <h3 class="h4 bonus-item__title bonus-item__title--green">
+                            Insurance
+                        </h3>
+                        <div class="bonus-item__desc">
+                            Receive 20% of the round total for the next 5 exploded melons.
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-item__footer">
+                    <div class="icon-btn icon-btn--check">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path fill="currentColor" d="M256,0C115.39,0,0,115.39,0,256s115.39,256,256,256s256-115.39,256-256S396.61,0,256,0z M225.019,372.44L112.914,260.336l42.422-42.422l71.646,71.646l143.833-130.752l40.371,44.385L225.019,372.44z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </div>
+                    <span class="label">Select option</span>
+                </div>
+            </div>
+        </div>
+        <div class="bonus-button">
+            <a href="javascript:void(0)" class="btn btn--primary btn--small btn--icon btn--bonus" style="margin-right: 10px;display: none;">
+                Let's Go
+                <span class="site-icon">
+                        <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><switch><foreignObject height="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1"/><g><g id="_x30_1_Logout"/><g id="_x30_2_User"/><g id="_x30_3_Login"><g><path fill="currentColor" d="m437 75c-48.3-48.4-112.6-75-181-75-49.2 0-97 14-138.2 40.5-40.1 25.8-72.2 62-92.8 104.9-6 12.4-.7 27.4 11.7 33.4s27.4.7 33.4-11.7c16.6-34.5 42.4-63.7 74.7-84.5 33.2-21.3 71.6-32.6 111.2-32.6 113.6 0 206 92.4 206 206s-92.4 206-206 206c-39.6 0-78-11.3-111.2-32.5-32.3-20.7-58.1-50-74.7-84.5-6-12.4-20.9-17.7-33.4-11.7-12.4 6-17.7 20.9-11.7 33.4 20.6 42.9 52.6 79.2 92.8 104.9 41.2 26.4 89 40.4 138.2 40.4 68.4 0 132.7-26.6 181-75 48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181z"/><path fill="currentColor" d="m139.4 256c0 13.8 11.2 25 25 25h142.2l-36.9 36.9c-9.8 9.8-9.8 25.6 0 35.4 4.9 4.9 11.3 7.3 17.7 7.3s12.8-2.4 17.7-7.3l62.9-62.9c9.2-9.2 14.2-21.4 14.2-34.3s-5.1-25.2-14.2-34.3l-62.9-62.9c-9.8-9.8-25.6-9.8-35.4 0s-9.8 25.6 0 35.4l36.9 36.9h-142.2c-13.8-.2-25 11-25 24.8z"/></g></g><g id="_x30_4_Close"/><g id="_x30_5_Accept"/><g id="_x30_6_Heart"/><g id="_x30_7_Shopping_Bag"/><g id="_x30_8_Cursor"/><g id="_x30_9_Settings"/><g id="_x31_0_Location"/><g id="_x31_1_Star"/><g id="_x31_2_Cloud"/><g id="_x31_3_Plus"/><g id="_x31_4_Search"/><g id="_x31_5_Chat"/><g id="_x31_6_Success"/><g id="_x31_7_Download"/><g id="_x31_8_Pencil"/><g id="_x31_9_Chevron"/><g id="_x32_0_User"/><g id="_x32_1_Minus"/><g id="_x32_2_Loading"/><g id="_x32_3_Upload"/><g id="_x32_4_Password"/><g id="_x32_5_Info"/><g id="_x32_6_Settings"/><g id="_x32_7_Chevron"/><g id="_x32_8_Menu"/><g id="_x32_9_Share"/><g id="_x33_0_Chevron"/><g id="_x33_1_Smartphone"/><g id="_x33_2_Link"/><g id="_x33_3_Folder"/><g id="_x33_4_Checked"/><g id="_x33_5_Bookmark"/><g id="_x33_6_Filter"/><g id="_x33_7_Cloud_Computing"/><g id="_x33_8_Question"/><g id="_x33_9_Eye"/><g id="_x34_0_Zoom_In"/><g id="_x34_1_Zoom_Out"/><g id="_x34_2_Trash"/><g id="_x34_3_Trash_Bin"/><g id="_x34_4_Send"/><g id="_x34_5_Notification"/><g id="_x34_6_Phone_Call"/><g id="_x34_7_Email"/><g id="_x34_8_Shopping_Cart"/><g id="_x34_9_Camera"/><g id="_x35_0_Menu"/></g></switch></svg>
+                    </span>
+            </a>
+            <a href="javascript:void(0)" class="btn btn--outline site-popup--close">
+                Skip
+            </a>
+        </div>
+    </div>
+</div>
+<div id="final" class="site-popup final-popup">
+    <div class="site-popup__wrapper">
+        <div class="final-popup__thumbnail">
+            <div class="final-popup__image">
+                <img src="./assets/images/finalscene.png" alt="">
+                <img src="./assets/images/finalscene-1.png" class="ele ele1">
+                <img src="./assets/images/finalscene-2.png" class="ele ele2">
+                <img src="./assets/images/finalscene-3.png" class="ele ele3">
+                <img src="./assets/images/finalscene-4.png" class="ele ele4">
+                <div class="final-popup__points">
+                    <div class="h4 label">Your Total Reward</div>
+                    <div class="h1 points"><sup>$</sup> 38.17</div>
+                </div>
+            </div>
+        </div>
+        <div class="final-popup__footer">
+            <div class="final-popup__desc">
+                <h3 class="h2 text--primary">Congratulations!</h3>
+                <p class="h4 desc">Your game data has been analyzed
+                    and saved to your profile.</p>
+            </div>
+            <div class="btn-group">
+                <a href="javascript:void(0)" class="btn btn--small btn--secondary btn--reset" style="max-width: 90px;">
+                        <span class="icon-btn">
+                            <svg id="svg10654" height="512" viewBox="0 0 6.3499999 6.3500002" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g id="layer1" transform="translate(0 -290.65)"><path id="path9585" d="m.38964766 293.99435c.0938001 1.53496 1.42041304 2.70708 2.95537484 2.61328 1.5349617-.0938 2.7091508-1.42042 2.6153427-2.95538-.04721-.77243-.4094003-1.45186-.9498118-1.92546l.4263311-.0822c.3294221-.053.278503-.54158-.077256-.52245l-1.1242225.21601c-.1442562.0271-.2388659.16649-.2108386.31058l.212905 1.10122c.053676.36418.6037024.2591.5193506-.0992l-.1023194-.53435c.4431004.38417.7395686.93662.7782454 1.56941.076361 1.24951-.869741 2.31781-2.119249 2.39417-1.2495108.0764-2.31781102-.86922-2.39416973-2.11873-.0763614-1.24951.86767463-2.31833 2.11718273-2.39469.3444267-.0214.3249057-.53452-.02585-.52942-1.5406477.094-2.71483679 1.42222-2.62102877 2.95718z" font-variant-ligatures="normal" font-variant-position="normal" font-variant-caps="normal" font-variant-numeric="normal" font-variant-alternates="normal" font-feature-settings="normal" text-indent="0" text-align="start" text-decoration-line="none" text-decoration-style="solid" text-decoration-color="rgb(0,0,0)" text-transform="none" text-orientation="mixed" white-space="normal" shape-padding="0" isolation="auto" mix-blend-mode="normal" solid-color="rgb(0,0,0)" solid-opacity="1" vector-effect="none" paint-order="stroke fill markers" fill="currentColor"/></g></svg>
+                        </span>
+                </a>
+                <a href="https://invis.io/ERXQ6FNQF5Y#/435363459_01-OHRG-ProfilePage-How" class="btn btn--small btn--primary btn--view-profile btn--icon">
+                    View Profile
+                    <span class="icon-btn">
+                            <svg enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><switch><foreignObject height="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1"/><g><g id="_x30_1_Logout"/><g id="_x30_2_User"/><g id="_x30_3_Login"/><g id="_x30_4_Close"/><g id="_x30_5_Accept"/><g id="_x30_6_Heart"/><g id="_x30_7_Shopping_Bag"/><g id="_x30_8_Cursor"/><g id="_x30_9_Settings"/><g id="_x31_0_Location"/><g id="_x31_1_Star"/><g id="_x31_2_Cloud"/><g id="_x31_3_Plus"/><g id="_x31_4_Search"/><g id="_x31_5_Chat"/><g id="_x31_6_Success"/><g id="_x31_7_Download"/><g id="_x31_8_Pencil"/><g id="_x31_9_Chevron"/><g id="_x32_0_User"><g><path fill="currentColor" d="m232.3 0c-79.6 0-144.3 64.7-144.3 144.3 0 79.5 64.7 144.3 144.3 144.3s144.3-64.7 144.3-144.3c-.1-79.6-64.8-144.3-144.3-144.3zm0 238.6c-52 0-94.3-42.3-94.3-94.3s42.3-94.3 94.3-94.3 94.3 42.3 94.3 94.3-42.4 94.3-94.3 94.3z"/><path fill="currentColor" d="m278.3 462h-208.7c-8.4 0-13.3-4.8-15.5-7.7-3.8-5-5-11.3-3.3-17.3 10.3-37.4 31.7-70.4 61.8-95.2 10.6-8.8 12.2-24.5 3.4-35.2-8.8-10.6-24.5-12.2-35.2-3.4-38.1 31.5-65.2 73.1-78.2 120.5-5.9 21.3-1.6 43.5 11.7 60.9s33.4 27.4 55.3 27.4h208.7c13.8 0 25-11.2 25-25s-11.2-25-25-25z"/><path fill="currentColor" d="m487 462h-114.2c-13.8 0-25 11.2-25 25s11.2 25 25 25h114.2c13.8 0 25-11.2 25-25s-11.2-25-25-25z"/><path fill="currentColor" d="m487 372h-114.2c-13.8 0-25 11.2-25 25s11.2 25 25 25h114.2c13.8 0 25-11.2 25-25s-11.2-25-25-25z"/><path fill="currentColor" d="m347.8 307c0 13.8 11.2 25 25 25h114.2c13.8 0 25-11.2 25-25s-11.2-25-25-25h-114.2c-13.8 0-25 11.2-25 25z"/></g></g><g id="_x32_1_Minus"/><g id="_x32_2_Loading"/><g id="_x32_3_Upload"/><g id="_x32_4_Password"/><g id="_x32_5_Info"/><g id="_x32_6_Settings"/><g id="_x32_7_Chevron"/><g id="_x32_8_Menu"/><g id="_x32_9_Share"/><g id="_x33_0_Chevron"/><g id="_x33_1_Smartphone"/><g id="_x33_2_Link"/><g id="_x33_3_Folder"/><g id="_x33_4_Checked"/><g id="_x33_5_Bookmark"/><g id="_x33_6_Filter"/><g id="_x33_7_Cloud_Computing"/><g id="_x33_8_Question"/><g id="_x33_9_Eye"/><g id="_x34_0_Zoom_In"/><g id="_x34_1_Zoom_Out"/><g id="_x34_2_Trash"/><g id="_x34_3_Trash_Bin"/><g id="_x34_4_Send"/><g id="_x34_5_Notification"/><g id="_x34_6_Phone_Call"/><g id="_x34_7_Email"/><g id="_x34_8_Shopping_Cart"/><g id="_x34_9_Camera"/><g id="_x35_0_Menu"/></g></switch></svg>
+                        </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="collect-round" class="site-popup">
+    <div class="popup-collect__wrapper">
+        <div class="popup-collect__thumbnail">
+            <div class="popup-collect__image">
+                <img src="./assets/images/collect-round.png" alt="">
+            </div>
+            <div class="popup-collect__image--light">
+                <img src="./assets/images/light.png" alt="">
+            </div>
+            <div class="popup-collect__content">
+                <div class="popup-collect__title">
+                    Reward collected
+                </div>
+                <div class="popup-collect__point">
+                    <span class="sup">$</span>
+                    <span class="data-point">12.17</span>
+                </div>
+            </div>
+        </div>
+        <div class="bonus-visibility" style="display: none;">
+            <div class="bonus-visibility__icon">
+                <img src="./assets/images/bonus/visibility.png">
+            </div>
+            <div class="bonus-visibility__title">
+                Visibility Cost
+            </div>
+            <div class="bonus-visibility__price">
+                <sup>$</sup><span>00.00</span>
+            </div>
+        </div>
+        <a href="javascript:void(0)" id="btn-next-round" class="btn btn--primary btn--collect-round">
+            Next Round
+        </a>
+    </div>
+</div>
+<script src="./assets/jquery.min.js"></script>
+<script src="./assets/main.js?v=0.1"></script>
+</body>
+</html>

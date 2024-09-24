@@ -1,0 +1,35 @@
+@keyframes animateMelonLightning{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@keyframes waterMelonDown{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(500%);
+    }
+}
+
+.flex{
+    display: flex;
+}
+.align{
+    &--center{
+        align-items: center;
+    }
+}
+.justify{
+    &--center{
+        justify-content: center;
+    }
+}
